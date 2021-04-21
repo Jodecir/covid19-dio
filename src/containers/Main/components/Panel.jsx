@@ -18,9 +18,7 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
     </MenuItem>
   )
 
-  const textCovid19 = `
-    ${country} teve ${cases} Casos de COVID , cujo foram ${recovered} Recuperados - Ultima atualização: ${updateAt}
-  `
+  const textCovid19 = `${country} teve ${cases} Casos de COVID , cujo foram ${recovered} Recuperados - Ultima atualização: ${updateAt}`
 
   const copyInfo = () => {
     navigator.clipboard.writeText(textCovid19)
