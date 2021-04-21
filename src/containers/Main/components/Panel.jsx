@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import RefreshIcon from '../../../assets/images/refresh.svg'
-import { Card, Typography, Button, Select, MenuItem } from '../../../components'
+import { Card, Button, MenuItem, Select, Typography } from '../../../components'
 import COUNTRIES from '../../../commons/constants/countries'
 import { CardPanelContentStyled, ItemStyled } from './style'
 
@@ -18,7 +18,9 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
     </MenuItem>
   )
 
-  const textCovid19 = `País: ${country} - recuperados: ${recovered}`
+  const textCovid19 = `
+    O ${country} teve ${cases} Casos de COVID , cujo foram ${recovered} Recuperados - Ultima atualização: ${updateAt}
+  `
 
   const copyInfo = () => {
     navigator.clipboard.writeText(textCovid19)
