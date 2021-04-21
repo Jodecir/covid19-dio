@@ -19,7 +19,7 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
   )
 
   const textCovid19 = `
-    O ${country} teve ${cases} Casos de COVID , cujo foram ${recovered} Recuperados - Ultima atualização: ${updateAt}
+    ${country} teve ${cases} Casos de COVID , cujo foram ${recovered} Recuperados - Ultima atualização: ${updateAt}
   `
 
   const copyInfo = () => {
