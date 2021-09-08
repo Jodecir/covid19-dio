@@ -18,6 +18,7 @@ export const CardContentStyled = styled(CardContent)`
 export const CardPanelContentStyled = styled(CardContent)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px;
 `
 
