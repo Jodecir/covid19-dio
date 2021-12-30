@@ -58,7 +58,7 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
               fontSize: '24px',
               fontWeight: '600'
             }}
-            variant="h5" component="span" color="primary">COVID19
+            variant="h5" component="span" color="primary">Countries
           </Typography>
           <div className="pt-2">
             <Select onChange={onChange} value={country}>
