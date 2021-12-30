@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import {useState} from 'react'
 import RefreshIcon from '../../../assets/images/refresh.svg'
 import { Card, Button, MenuItem, Select, Typography } from '../../../components'
 import COUNTRIES from '../../../commons/constants/countries'
@@ -8,6 +9,8 @@ const navigatorHasShare = navigator.share
 
 function Panel({ updateAt, onChange, data, country, getCoviddata }) {
   const { cases, recovered, deaths, todayCases, todayDeaths } = data
+
+  const [quantity, upQuantity] = useState(1);
 
   const renderCountries = (country, index) => (
     <MenuItem key={`country-${index}`} value={country.value}>
@@ -34,8 +37,8 @@ function Panel({ updateAt, onChange, data, country, getCoviddata }) {
 
   const renderShareButton = (
     <div>
-      <Button variant="contained" color="primary" onClick={shareInfo}>
-        Compartilhar
+      <Button variant="contained" color="primary" onClick={()=> upQuantity(quantity + 1), shareInfo}>
+      Compartilhar
       </Button>
     </div>
   )
